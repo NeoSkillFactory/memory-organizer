@@ -1,0 +1,51 @@
+{
+  "name": "memory-organizer",
+  "version": "1.0.0",
+  "description": "Automatically categorizes and structures memory data into organized sections to improve retrieval and prevent information loss.",
+  "main": "scripts/cli.js",
+  "bin": {
+    "memory-organizer": "./scripts/cli.js"
+  },
+  "scripts": {
+    "start": "node scripts/cli.js",
+    "test": "node tests/organizer.test.js",
+    "organize": "node scripts/cli.js organize",
+    "report": "node scripts/cli.js report"
+  },
+  "keywords": [
+    "openclaw",
+    "skill",
+    "memory",
+    "organization",
+    "categorization",
+    "automation"
+  ],
+  "author": "OpenClaw Skill Factory",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "files": [
+    "scripts/",
+    "references/",
+    "assets/",
+    "SKILL.md",
+    "README.md"
+  ],
+  "openclaw": {
+    "skill": {
+      "id": "memory-organizer",
+      "version": "1.0.0",
+      "compatibility": ">=1.0.0",
+      "permissions": [
+        "file:read",
+        "file:write"
+      ],
+      "capabilities": [
+        "memory:organize",
+        "memory:categorize",
+        "memory:report"
+      ]
+    }
+  }
+}
