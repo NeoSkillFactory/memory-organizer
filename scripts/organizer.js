@@ -52,9 +52,14 @@ function scanDirectory(dirPath, config) {
 
 /**
  * Read file content safely. Returns null on error.
+ * Skips files larger than 10MB to avoid memory issues.
  */
-function readFileContent(filePath) {
+function readFileContent(filePath, maxBytes = 10 * 1024 * 1024) {
   try {
+    const stat = fs.statSync(filePath);
+    if (stat.size > maxBytes) {
+      return null;
+    }
     return fs.readFileSync(filePath, 'utf-8');
   } catch (err) {
     return null;
