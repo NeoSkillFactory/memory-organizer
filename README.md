@@ -38,8 +38,6 @@ Place a `memory-organizer.json` in your project root or pass `--template` to ove
 
 Source code: [github.com/NeoSkillFactory/memory-organizer](https://github.com/NeoSkillFactory/memory-organizer)
 
-**Price suggestion:** $24.99 USD
-
 ## License
 
 MIT © NeoSkillFactory
